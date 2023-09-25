@@ -8,7 +8,7 @@ const redHatDisplay = Red_Hat_Display({
 export default function OrderSummary() {
   return (
     <main className="bg-white" style={redHatDisplay.style}>
-      <section className="py-16 px-6 bg-[url('/assets/images/order-summary-component-main/pattern-background-mobile.svg')] min-[375px]:bg-[url('/assets/images/order-summary-component-main/pattern-background-desktop.svg')] w-full bg-no-repeat min-h-screen">
+      <section className="py-16 px-6 bg-[url('/assets/images/order-summary-component-main/pattern-background-mobile.svg')] min-[375px]:bg-[url('/assets/images/order-summary-component-main/pattern-background-desktop.svg')] w-full lg:bg-cover bg-no-repeat min-h-screen">
         <div className="mx-auto border tracking-wider bg-white rounded-xl overflow-hidden max-w-[406px]">
           <Image
             className="object-cover w-full"
