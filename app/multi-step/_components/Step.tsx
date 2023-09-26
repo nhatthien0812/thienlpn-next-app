@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import BgSidebarDesktop from '@/_images/multi-step/bg-sidebar-desktop.svg'
+import BgSidebarDesktop from '../_images/bg-sidebar-desktop.svg'
 export default function Step() {
   const steps = [
     {
@@ -30,8 +30,8 @@ export default function Step() {
   return (
     <>
       <div className="relative">
-        <div className="absolute">
-          <Image src={BgSidebarDesktop} alt="" width={500} height={500} />
+        <div className="absolute top-0 left-0 bg-white">
+          <Image src={BgSidebarDesktop} className="w-full h-full" alt="" fill />
         </div>
       </div>
     </>
