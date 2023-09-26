@@ -10,7 +10,7 @@ const redHatDisplay = Red_Hat_Display({
 export default function OrderSummary() {
   const background =
     process.env.NODE_ENV === 'production'
-      ? "bg-[url('/thienlpn-next-app/assets/images/order-summary-component-main/pattern-background-mobile.svg')] min-[375px]:bg-[url('/thienlpn-next-app/assets/images/order-summary-component-main/pattern-background-desktop.svg')]"
+      ? "bg-[url('/thienlpn-next-app/assets/_images/order-summary-component-main/pattern-background-mobile.svg')] min-[375px]:bg-[url('/thienlpn-next-app/assets/_images/order-summary-component-main/pattern-background-desktop.svg')]"
       : `bg-[url('/assets/images/order-summary-component-main/pattern-background-mobile.svg')] min-[375px]:bg-[url('/assets/images/order-summary-component-main/pattern-background-desktop.svg')]`
   return (
     <main className="bg-white" style={redHatDisplay.style}>
