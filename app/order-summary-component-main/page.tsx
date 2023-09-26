@@ -1,15 +1,25 @@
 import Image from 'next/image'
 import { Red_Hat_Display } from 'next/font/google'
-import iconMusic from '/assets/images/order-summary-component-main/icon-music.svg'
+import clsx from 'clsx'
 
 const redHatDisplay = Red_Hat_Display({
   weight: ['500', '700', '900'],
   subsets: ['latin-ext'],
 })
+
 export default function OrderSummary() {
+  const background =
+    process.env.NODE_ENV === 'production'
+      ? "bg-[url('/thienlpn-next-app/assets/images/order-summary-component-main/pattern-background-mobile.svg')] min-[375px]:bg-[url('/thienlpn-next-app/assets/images/order-summary-component-main/pattern-background-desktop.svg')]"
+      : `bg-[url('/assets/images/order-summary-component-main/pattern-background-mobile.svg')] min-[375px]:bg-[url('/assets/images/order-summary-component-main/pattern-background-desktop.svg')]`
   return (
     <main className="bg-white" style={redHatDisplay.style}>
-      <section className="py-16 px-6 bg-[url('/assets/images/order-summary-component-main/pattern-background-mobile.svg')] min-[375px]:bg-[url('/assets/images/order-summary-component-main/pattern-background-desktop.svg')] w-full lg:bg-cover bg-no-repeat min-h-screen">
+      <section
+        className={clsx(
+          'py-16 px-6 w-full min-h-screen bg-repeat-x',
+          background
+        )}
+      >
         <div className="mx-auto border tracking-wider bg-white rounded-xl overflow-hidden max-w-[406px]">
           <Image
             className="object-cover w-full"
