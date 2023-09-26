@@ -3,7 +3,8 @@ const isProd = process.env.NODE_ENV === 'production'
 
 const nextConfig = {
   output: 'export',
-  assetPrefix: '/thienlpn-next-app',
+  assetPrefix: isProd ? '/thienlpn-next-app' : undefined,
+  basePath: isProd ? '/thienlpn-next-app' : undefined,
 }
 
 module.exports = nextConfig
