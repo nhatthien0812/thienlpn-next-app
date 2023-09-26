@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Red_Hat_Display } from 'next/font/google'
+import iconMusic from '/assets/images/order-summary-component-main/icon-music.svg'
 
 const redHatDisplay = Red_Hat_Display({
   weight: ['500', '700', '900'],
@@ -12,7 +13,7 @@ export default function OrderSummary() {
         <div className="mx-auto border tracking-wider bg-white rounded-xl overflow-hidden max-w-[406px]">
           <Image
             className="object-cover w-full"
-            src="/assets/images/order-summary-component-main/illustration-hero.svg"
+            src={`${process.env.BASE_PATH}/assets/images/order-summary-component-main/illustration-hero.svg`}
             alt=""
             width={375}
             height={250}
@@ -29,7 +30,7 @@ export default function OrderSummary() {
             <div className="rounded-xl bg-slate-100 px-4 py-6 flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 <Image
-                  src="/assets/images/order-summary-component-main/icon-music.svg"
+                  src={`${process.env.BASE_PATH}/assets/images/order-summary-component-main/icon-music.svg`}
                   alt=""
                   width={48}
                   height={48}
