@@ -70,9 +70,9 @@ export default function SelectPlan() {
       </div>
 
       <div className="rounded-xl bg-cool-gray p-8">
-        <div className="bg-marine-blue w-11 p-1 rounded-2xl">
-          <input type="checkbox" id="toggleB" className="sr-only"></input>
-          <div className="bg-cool-gray w-4 h-4 trans rounded-full"></div>
+        <div className="bg-marine-blue w-11 p-1 rounded-2xl relative">
+          <input type="checkbox" className="sr-only"></input>
+          <div className="bg-cool-gray w-4 h-4 transition rounded-full block"></div>
         </div>
       </div>
     </div>
