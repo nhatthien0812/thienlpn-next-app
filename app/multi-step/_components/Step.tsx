@@ -3,46 +3,18 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import { useState } from 'react'
 import BgSidebarDesktop from '../_images/bg-sidebar-desktop.svg'
+import { IStep } from '@/app/model/step'
 
-type Step = {
-  id: string
-  title: string
-  description: string
-  isComplete: boolean
+type StepProps = {
+  initSteps: IStep[]
+  setIndex: (index: number) => void
 }
+export default function Step({ initSteps, setIndex }: StepProps) {
+  const [steps, setSteps] = useState<IStep[]>(initSteps)
 
-export default function Step() {
-  const initSteps: Step[] = [
-    {
-      id: 'step-1',
-      title: 'Step 1',
-      description: 'YOUR INFO',
-      isComplete: true,
-    },
-    {
-      id: 'step-2',
-      title: 'Step 2',
-      description: 'SELECT PLAN',
-      isComplete: false,
-    },
-    {
-      id: 'step-3',
-      title: 'Step 3',
-      description: 'ADD-ONS',
-      isComplete: false,
-    },
-    {
-      id: 'step-4',
-      title: 'Step 4',
-      description: 'SUMMARY',
-      isComplete: false,
-    },
-  ]
-
-  const [steps, setSteps] = useState<Step[]>(initSteps)
-
-  const onStepClick = (id: string) => {
+  const onStepClick = (id: number) => {
     setSteps(steps.map((item) => ({ ...item, isComplete: id === item.id })))
+    setIndex(id)
   }
 
   return (

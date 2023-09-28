@@ -12,6 +12,7 @@ export default function Field(props: FieldProps) {
     <div className="flex flex-col space-y-1 text-black">
       <label className="text-sm">{props.label}</label>
       <input
+        required
         value={value}
         onChange={(e) => {
           setValue(e.target.value)
