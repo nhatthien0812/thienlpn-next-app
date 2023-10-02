@@ -69,11 +69,11 @@ export default function SelectPlan() {
         ))}
       </div>
 
-      <div className="rounded-xl bg-cool-gray p-8">
-        <div className="bg-marine-blue w-11 p-1 rounded-2xl relative">
-          <input type="checkbox" className="sr-only"></input>
-          <div className="bg-cool-gray w-4 h-4 transition rounded-full block"></div>
-        </div>
+      <div className="rounded-xl bg-cool-gray flex items-center justify-center w-full p-8">
+        <label className="flex items-center cursor-pointer">
+          <input type="checkbox" id="toggle" className="sr-only peer" />
+          <div className="block relative bg-marine-blue w-16 h-9 p-1 rounded-full before:absolute before:bg-alabaster before:w-7 before:h-7 before:p-1 before:rounded-full before:transition-all before:duration-500 before:left-1 peer-checked:before:left-8 peer-checked:before:bg-white"></div>
+        </label>
       </div>
     </div>
   )
